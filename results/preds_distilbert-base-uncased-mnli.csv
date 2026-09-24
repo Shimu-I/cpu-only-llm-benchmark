@@ -1,0 +1,201 @@
+text,label_text,predicted
+My card still hasn't arrived after 2 weeks. Is it lost?,card_arrival,card_arrival
+I've been waiting longer than expected for my card.,card_arrival,change_pin
+"I have been waiting longer than expected for my bank card, could you provide information on when it will arrive?",card_arrival,verify_my_identity
+I think something went wrong with my card delivery as I haven't received it yet.,card_arrival,transfer_not_received_by_recipient
+My card has not arrived yet.,card_arrival,transfer_not_received_by_recipient
+I still don't have my card after 2 weeks.  What should I do?,card_arrival,change_pin
+Is there tracking info available?,card_arrival,change_pin
+"I'm still waiting for delivery of my new card, why is it taking so long?",card_arrival,card_arrival
+Where is the tracking number for the card you sent me?,card_arrival,verify_my_identity
+Do you know if there is a tracking number for the new card you sent me?,card_arrival,verify_my_identity
+What is the tracking number for my card that was mailed?,card_arrival,verify_my_identity
+Is it normal to have to wait over a week for my new card?,card_arrival,change_pin
+still waiting on my new card,card_arrival,change_pin
+I was expecting my new card and am wondering why I haven't received it yet?,card_arrival,transfer_not_received_by_recipient
+Does the card you sent have a way to track to it?,card_arrival,change_pin
+still waiting on that card,card_arrival,change_pin
+Why hasn't my card been delivered?,card_arrival,lost_or_stolen_card
+"My card has not arrived yet, where is it?",card_arrival,transfer_not_received_by_recipient
+How do I locate my card?,card_arrival,verify_my_identity
+I'm still waiting on my card to be delivered.,card_arrival,card_arrival
+I need to change my PIN. Can I do that at a cash machine?,change_pin,verify_my_identity
+What kind of cash machines would allow me to change my PIN?,change_pin,change_pin
+May I receive a different card pin,change_pin,change_pin
+Can i change my PIN at the ATM?,change_pin,verify_my_identity
+I need to change my pin but I am on the road.,change_pin,change_pin
+I want to choose a different PIN.,change_pin,change_pin
+I need a new Pin how do I go about that?,change_pin,change_pin
+How do I update the PIN on my account?,change_pin,change_pin
+How do I update my PIN to a new number?,change_pin,change_pin
+In what ATM can I change my pin?,change_pin,change_pin
+Where can I find instructions to change my PIN?,change_pin,verify_my_identity
+"I desperately need to change my PIN, but I'm overseas on vacation right now. How can I do this?",change_pin,terminate_account
+Do cash machines let me change my pin?,change_pin,exchange_rate
+How might  I change my PIN?,change_pin,change_pin
+I am travelling for two more weeks but really need to change my PIN asap. What do I do?,change_pin,change_pin
+"I am in Austria right now. I need to change my PIN ASAP, so can I still do this from here?",change_pin,change_pin
+Which cash machines will allow me to change my PIN?,change_pin,exchange_rate
+Show me how to change my pin?,change_pin,change_pin
+What steps do I need to take to change my card PIN?,change_pin,change_pin
+Please tell me which cash machines will allow me to change my pin.,change_pin,verify_my_identity
+Something is wrong with my payment account since it has been declined,declined_card_payment,transfer_not_received_by_recipient
+"I was out today looking forward to pay with my new card, turns out the payment just kept getting declined. This is really sad, what's going on?",declined_card_payment,declined_card_payment
+"I tried using my card and it kept getting declined, Why?",declined_card_payment,transfer_not_received_by_recipient
+My card was declined in a shop,declined_card_payment,declined_card_payment
+My card didn't work in one of the shops.,declined_card_payment,transfer_not_received_by_recipient
+I was trying to purchase something at the store today and my card has been declined.  Why has this happened?,declined_card_payment,declined_card_payment
+"I have a card payment that was declined, but why?",declined_card_payment,declined_card_payment
+The new card that was just sent to me was declined multiple times yesterday when I tried to use it at a restaurant to pay for my dinner.  I am really disappointed  and embarrassed that my card was denied when I tried to use it to pay for my friend's birthday dinner.,declined_card_payment,declined_card_payment
+My card payment did not work.,declined_card_payment,declined_card_payment
+"My payment has been declined, I thought this issue was fixed!",declined_card_payment,transfer_not_received_by_recipient
+Why was my Payment declined,declined_card_payment,transfer_not_received_by_recipient
+Why has my card payment been declined?,declined_card_payment,declined_card_payment
+My card payment did not complete.,declined_card_payment,declined_card_payment
+"I finally got my new card and was very excited to use it today. However, my payment kept declining. What is happening?",declined_card_payment,declined_card_payment
+Why are you declining my payment? Everything was fine.,declined_card_payment,request_refund
+Why was my card payment declined?,declined_card_payment,declined_card_payment
+Why was a transaction on my card declined?,declined_card_payment,declined_card_payment
+How do you fix  my card payment?,declined_card_payment,verify_my_identity
+My new card keeps getting declined. I was very excited to use it for the first time today. Why is this doing this?,declined_card_payment,declined_card_payment
+Card payment declined?,declined_card_payment,declined_card_payment
+What foreign exchange rate will you use?,exchange_rate,exchange_rate
+why do your exchange rates change,exchange_rate,exchange_rate
+What is the exchange rate like?,exchange_rate,exchange_rate
+Where did your guys exchange rates come from?,exchange_rate,exchange_rate
+Please advise what is the exchange rate,exchange_rate,exchange_rate
+What exchange rates do you offer?,exchange_rate,exchange_rate
+What are the most current exchange rates?,exchange_rate,exchange_rate
+What are your international exchange rates?,exchange_rate,exchange_rate
+How are you determining your exchange rates?,exchange_rate,exchange_rate
+What is the base of the exchange rates?,exchange_rate,exchange_rate
+Will I get a curreng foreign exchange rate?,exchange_rate,exchange_rate
+what are exchange rates,exchange_rate,exchange_rate
+Do you have a list of exchange rates?,exchange_rate,exchange_rate
+Where do you get your exchange rates from?,exchange_rate,exchange_rate
+what is the exchange rate?,exchange_rate,exchange_rate
+What is my foreign exchange rate?,exchange_rate,exchange_rate
+Where do you guys acquire your exchange rate?,exchange_rate,exchange_rate
+Can you tell me where you get your exchange rates?,exchange_rate,exchange_rate
+How do your exchange rates work?,exchange_rate,exchange_rate
+What currencies is an exchange rate calculated in?,exchange_rate,exchange_rate
+I lost my wallet today with all my credit cards. Will you please block the card and send a replacement?,lost_or_stolen_card,lost_or_stolen_card
+Can you freeze my card it was stolen,lost_or_stolen_card,declined_card_payment
+I think my card was stolen.,lost_or_stolen_card,declined_card_payment
+I can't find my card and think it may have been stolen.,lost_or_stolen_card,lost_or_stolen_card
+Is a copy of the police report necessary for completing the report process?,lost_or_stolen_card,change_pin
+Help!  I can't find my card.,lost_or_stolen_card,lost_or_stolen_card
+"I cant find my card, it's gone.",lost_or_stolen_card,lost_or_stolen_card
+How do I deal with a stolen card?,lost_or_stolen_card,lost_or_stolen_card
+How can I freeze a stolen card?,lost_or_stolen_card,lost_or_stolen_card
+My bags were stolen. I need a new card but need to cancel the stolen one.,lost_or_stolen_card,lost_or_stolen_card
+How do I report a stolen card?,lost_or_stolen_card,verify_my_identity
+What should I do if I lost my card?,lost_or_stolen_card,declined_card_payment
+How do I report my card stolen?,lost_or_stolen_card,verify_my_identity
+Help.  I have a stolen card!,lost_or_stolen_card,declined_card_payment
+"Someone stole my wallet earlier today, not sure exactly when, probably on Piccadilly circus. Can you check if there were any attempts to use the card and obviously block it?",lost_or_stolen_card,lost_or_stolen_card
+My card got lost.,lost_or_stolen_card,declined_card_payment
+My card is lost! What can I do?,lost_or_stolen_card,declined_card_payment
+I think I lost my card . I dont know how long it has been missing. Can you see if maybe someone else has been using it?,lost_or_stolen_card,declined_card_payment
+"I believe my card has been stolen, what can I do about this situation? It's urgent.",lost_or_stolen_card,declined_card_payment
+Help me please!  My card was stolen!,lost_or_stolen_card,declined_card_payment
+I am not Happy with this product can i get a refund?,request_refund,request_refund
+How do I apply for a refund?,request_refund,request_refund
+I need a refund?,request_refund,request_refund
+"I wasn't charged the correct amount for an item I purchased, how can I fix this?",request_refund,change_pin
+I would like a refund for something I bought,request_refund,request_refund
+I want a refund because my package has been taking too long to arrive. How do I go about doing that?,request_refund,request_refund
+I want to return an item.,request_refund,request_refund
+I would appreciate it if I could get an item refunded,request_refund,transfer_not_received_by_recipient
+I want to get an item refunded,request_refund,request_refund
+"I ordered something ages ago online but it's simply not arriving. I've got enough! Give me back my money, I'm not paying these people.",request_refund,transfer_not_received_by_recipient
+Can I have an item refunded?,request_refund,request_refund
+"I don't want the item, I bought it on accident, can I get a refund?",request_refund,request_refund
+Can I have a refund?,request_refund,transfer_not_received_by_recipient
+I want this amount reversed out of my account.,request_refund,terminate_account
+Can you cancel my purchase?,request_refund,request_refund
+Hello I changed my mind and really need a refund on one of things I bought recently. Can you please cancel the transaction and get my money back. Please it's urgent.,request_refund,request_refund
+I bought something but now I would like a refund. How do I do that?,request_refund,request_refund
+I bought this item and was charged the wrong amount can I get a refund?,request_refund,terminate_account
+I want to reverse a purchase. Can I cancel it?,request_refund,transfer_not_received_by_recipient
+How do I claim a refund?,request_refund,verify_my_identity
+Can you delete my account please?,terminate_account,terminate_account
+"This company is bad, please delete my account.",terminate_account,terminate_account
+I would like to close my account.,terminate_account,terminate_account
+I'm tired of all the problems I've had. I want to quit this account!,terminate_account,terminate_account
+This company sucks! Can you terminate my account?,terminate_account,transfer_not_received_by_recipient
+I would like to delete my account please.,terminate_account,terminate_account
+This company is terrible! Can you delete my account?,terminate_account,terminate_account
+I want to close my account,terminate_account,terminate_account
+Please close my account. I am unsatisfied with your service.,terminate_account,terminate_account
+I am sick of this damn company and want to close out my account.,terminate_account,terminate_account
+"This company isn't good, I would like to delete my account.",terminate_account,terminate_account
+"unhappy with you, how to delete account",terminate_account,terminate_account
+I want my account deleted!,terminate_account,terminate_account
+"I don't find your services useful anymore, how do I delete my account?",terminate_account,terminate_account
+"Your service is terrible,.  Delete my account,",terminate_account,terminate_account
+What steps do I need to take to close my account?,terminate_account,terminate_account
+I don't like your company. Delete my account.,terminate_account,terminate_account
+I want to delete my account. I'm unhappy with the service you're providing.,terminate_account,terminate_account
+I wish to close my account. I do not like the service you provide.,terminate_account,terminate_account
+"i want to close an account but im not sure about setting up a new one in the future, what do you recommend",terminate_account,terminate_account
+How do I know if my top up was unsuccessful?,top_up_failed,top_up_failed
+I tried to top up. Why was it denied?,top_up_failed,change_pin
+Why can't I top up?,top_up_failed,change_pin
+My top up failed.,top_up_failed,top_up_failed
+Why did the app deny my top up?,top_up_failed,top_up_failed
+My top-up has failed.,top_up_failed,top_up_failed
+I don't think my top up is working correctly,top_up_failed,top_up_failed
+Why didn`t my topup go through?,top_up_failed,transfer_not_received_by_recipient
+Why was my top-up unsuccessful?,top_up_failed,top_up_failed
+please tell me why my top-up failed.,top_up_failed,top_up_failed
+I need to know why my credit card was declined for top up? What is the deal here and why did it not go through?,top_up_failed,declined_card_payment
+How can I check to see if my top-up worked?,top_up_failed,verify_my_identity
+My top up didn't work.,top_up_failed,top_up_failed
+Why caused my top up to not work?,top_up_failed,top_up_failed
+The app denied my top-up,top_up_failed,top_up_failed
+"My top-up failed, WHY?",top_up_failed,top_up_failed
+My top-up isn't working.,top_up_failed,top_up_failed
+Can you tell me why my top up didn't work?,top_up_failed,top_up_failed
+How did my top-up fail?,top_up_failed,top_up_failed
+The app won't let me top up my account,top_up_failed,change_pin
+"I've just moved address from a place in Durham to a place in Walton-On-The-Naze.  I have a new landlord at my new house and they haven't got my payment but I know I sent it on time, can you check they got it please?",transfer_not_received_by_recipient,verify_my_identity
+"Hey, I need some help figuring out way my transfer is not complete yet. My Landlord hasn't got the money yet.She should have received it by now.",transfer_not_received_by_recipient,transfer_not_received_by_recipient
+My money transfer has not arrived.,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+how long do money transfers take?,transfer_not_received_by_recipient,exchange_rate
+"I'm having a problem with a money transfer.  I sent some money to a friend a couple of hours ago, and they haven't received it yet.  Why hasn't it gotten to them? How long do transfers need to go through?",transfer_not_received_by_recipient,transfer_not_received_by_recipient
+I transferred some money and it didint arrive,transfer_not_received_by_recipient,change_pin
+How can the recipient see my money transaction?,transfer_not_received_by_recipient,verify_my_identity
+How long will it take for my transaction to be completed?,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+The person I sent money to hasn't gotten it yet!,transfer_not_received_by_recipient,request_refund
+Im waiting for my transaction to go through.,transfer_not_received_by_recipient,change_pin
+How long until my friend receives my transaction?,transfer_not_received_by_recipient,change_pin
+I am still awaiting the completion of the transaction.,transfer_not_received_by_recipient,change_pin
+I transferred some money but the receiver can't pick it up for some reason.,transfer_not_received_by_recipient,change_pin
+I sent my friend some money a few hours ago but she has not received it yet. She really needs it. How long does this take?,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+"I just finished sending money, but it's not logging on the recipient side.",transfer_not_received_by_recipient,transfer_not_received_by_recipient
+I transferred money but the recipient says it has not arrived. Why would this be?,transfer_not_received_by_recipient,change_pin
+"How long do transfers need to come through? I sent some money to a friend, she needs it urgently, but seems it's still not there yet after a couple hours.",transfer_not_received_by_recipient,declined_card_payment
+The transfer I did hasn't arrived,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+My friend still hasn't gotten a transaction I made.,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+How long does it take for a transfer to get to a recipient?,transfer_not_received_by_recipient,exchange_rate
+What is needed to prove my identity?,verify_my_identity,verify_my_identity
+What do I need to verify my identity,verify_my_identity,verify_my_identity
+How does my identity get verified?,verify_my_identity,verify_my_identity
+do the details of my profile have to match my documents,verify_my_identity,verify_my_identity
+What do you need for my identity check?,verify_my_identity,verify_my_identity
+What do I need to do to verify my identity?,verify_my_identity,verify_my_identity
+I need some help with identity verification.,verify_my_identity,verify_my_identity
+What will I need for identity verification?,verify_my_identity,verify_my_identity
+which kind of documentation do I need for identity check?,verify_my_identity,verify_my_identity
+What are the steps to verify my identity?,verify_my_identity,verify_my_identity
+do I need anything for the identity check?,verify_my_identity,verify_my_identity
+What do I need to show who I am?,verify_my_identity,verify_my_identity
+What's the process for ID verification?,verify_my_identity,change_pin
+What should I do to verify my identity?,verify_my_identity,verify_my_identity
+How can I verify my indentity?,verify_my_identity,verify_my_identity
+How do I go forth on verifying my identity?,verify_my_identity,verify_my_identity
+What all am I required to show for the identity check?,verify_my_identity,verify_my_identity
+I need to verify my identity,verify_my_identity,verify_my_identity
+Let me know the steps for the identity checks,verify_my_identity,verify_my_identity
+What do I do for the identity check?,verify_my_identity,verify_my_identity

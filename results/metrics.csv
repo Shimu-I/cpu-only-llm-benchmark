@@ -1,0 +1,2 @@
+model,type,accuracy,macro_f1,avg_latency_ms,ram_mb
+distilbert-base-uncased-mnli,huggingface_zero_shot,0.645,0.631,196.5,597

@@ -125,3 +125,14 @@ du -sh ~/.cache/huggingface
 - Tested on 4 messages first, before running on all 200.
 - Result: 2 of 4 correct. Correct predictions had low confidence (0.31, 0.16) and wrong predictions had high confidence (0.61, 0.88), so the model's confidence score is unreliable. To follow up in the failure analysis.
 - Cache size after download: 474 MB.
+
+## Step 14: Benchmark the zero-shot model on all 200 messages
+```bash
+python src/benchmark_hf_zeroshot.py
+cat results/metrics.csv
+```
+- Runs the model on all 200 sample messages and measures accuracy, macro F1, average latency per message and RAM use.
+- Saves every prediction to `results/preds_distilbert-base-uncased-mnli.csv` (for failure analysis) and appends one row to `results/metrics.csv`, the shared comparison table that later models add to.
+- A warm-up call runs first so model loading time doesn't distort the latency.
+- Result: accuracy 0.645, macro F1 0.631, 196.5 ms per message, 597 MB RAM.
+- This is the baseline: fast and light, but about 35% of messages are misrouted.
