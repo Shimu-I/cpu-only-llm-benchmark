@@ -209,3 +209,25 @@ python -m py_compile src/benchmark_*.py
 - Hard results go to separate files, so the easy results are never overwritten.
 - Also fixed the embedding script so it works even if the metrics file doesn't exist yet.
 - `python -m py_compile` checks that a script is valid Python without running it.
+
+## Step 21: Run all four models on the hard sample
+```bash
+python src/benchmark_embeddings.py hard
+python src/benchmark_hf_zeroshot.py hard
+python src/benchmark_ollama.py qwen2.5:3b hard
+python src/benchmark_ollama.py qwen2.5:7b-instruct hard
+```
+- Adding the word `hard` makes the scripts use `test_sample_hard.csv` and write to `results/metrics_hard.csv` and `results/preds_*_hard.csv`.
+- Results on the hard sample (easy accuracy in brackets):
+  - all-MiniLM-L6-v2 + classifier: accuracy 0.880 (0.990), 8.0 ms, 638 MB
+  - qwen2.5-7b-instruct: accuracy 0.760 (0.965), 1,509.7 ms, 4,854 MB
+  - qwen2.5-3b: accuracy 0.640 (0.975), 719.8 ms, 2,438 MB
+  - distilbert-base-uncased-mnli: accuracy 0.385 (0.645), 218.4 ms, 513 MB
+- Findings:
+  - Look-alike intents separate the models far more than the easy sample did.
+  - MiniLM still leads: 12 points more accurate than the best LLM, about 190x faster, about 1/8 of the RAM.
+  - Model size matters here: 7B beats 3B by 12 points, while on the easy sample they were tied.
+  - LLMs only see category names, so they guess where the line between similar intents falls. MiniLM learned it from about 1,300 labeled examples.
+- Idea to test: add a one-line description of each category to the LLM prompt.
+- Caveat: only 200 messages per sample.
+- Cosmetic issue: the DistilBERT row has a blank `unparsed` value, because that column was added after its script ran. To be cleaned up in the comparison step.

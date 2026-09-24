@@ -1,0 +1,201 @@
+text,label_text,raw_answer,predicted
+My card still hasn't arrived after 2 weeks. Is it lost?,card_arrival,card_delivery_estimate,card_delivery_estimate
+I've been waiting longer than expected for my card.,card_arrival,card_delivery_estimate,card_delivery_estimate
+"I have been waiting longer than expected for my bank card, could you provide information on when it will arrive?",card_arrival,card_delivery_estimate,card_delivery_estimate
+I think something went wrong with my card delivery as I haven't received it yet.,card_arrival,card_delivery_estimate,card_delivery_estimate
+My card has not arrived yet.,card_arrival,card_arrival,card_arrival
+I still don't have my card after 2 weeks.  What should I do?,card_arrival,card_delivery_estimate,card_delivery_estimate
+Is there tracking info available?,card_arrival,card_delivery_estimate,card_delivery_estimate
+"I'm still waiting for delivery of my new card, why is it taking so long?",card_arrival,card_delivery_estimate,card_delivery_estimate
+Where is the tracking number for the card you sent me?,card_arrival,card_delivery_estimate,card_delivery_estimate
+Do you know if there is a tracking number for the new card you sent me?,card_arrival,card_delivery_estimate,card_delivery_estimate
+What is the tracking number for my card that was mailed?,card_arrival,card_delivery_estimate,card_delivery_estimate
+Is it normal to have to wait over a week for my new card?,card_arrival,card_delivery_estimate,card_delivery_estimate
+still waiting on my new card,card_arrival,card_arrival,card_arrival
+I was expecting my new card and am wondering why I haven't received it yet?,card_arrival,card_delivery_estimate,card_delivery_estimate
+Does the card you sent have a way to track to it?,card_arrival,card_delivery_estimate,card_delivery_estimate
+still waiting on that card,card_arrival,card_arrival,card_arrival
+Why hasn't my card been delivered?,card_arrival,card_delivery_estimate,card_delivery_estimate
+"My card has not arrived yet, where is it?",card_arrival,card_delivery_estimate,card_delivery_estimate
+How do I locate my card?,card_arrival,card_arrival,card_arrival
+I'm still waiting on my card to be delivered.,card_arrival,card_delivery_estimate,card_delivery_estimate
+How long should I expect for the card to arrive?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+I need my card now!,card_delivery_estimate,lost_or_stolen_card,lost_or_stolen_card
+When are cards delivered?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+I'm just wondering when my card will get here.,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+I am waiting for my card to arrive.,card_delivery_estimate,card_arrival,card_arrival
+How long does it take to get my card? Can I choose when to receive it?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+Does delivery to the US take long?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+I need my card as soon as possible.,card_delivery_estimate,card_arrival,card_arrival
+May I choose when it's delivered?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+Can I have my card delivered on a specific day?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+When can I expect to receive my new card?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+I need my card quickly,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+Whats the delivery time to the United States?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+Can you get me my card fast?,card_delivery_estimate,card_arrival,card_arrival
+"Ordered awhile back, what is the ETA in the US?",card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+I need my card to come as soon as possible.,card_delivery_estimate,card_arrival,card_arrival
+How long until my card is delivered?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+What's the U.S. Delivery time?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+can I choose a date for delivery?,card_delivery_estimate,card_delivery_estimate,card_delivery_estimate
+When will my card arrive?,card_delivery_estimate,card_arrival,card_arrival
+"Someone has my card number, freeze my account.",compromised_card,compromised_card,compromised_card
+Someone else may be using my card.  There are transactions I don't recognize.,compromised_card,compromised_card,compromised_card
+What should I do if I think someone is using my card.,compromised_card,compromised_card,compromised_card
+Freeze my account it's been hacked.,compromised_card,compromised_card,compromised_card
+What do I do if I think someone managed to get my card information?,compromised_card,compromised_card,compromised_card
+My card was used without my permission.,compromised_card,compromised_card,compromised_card
+Can I use app to freeze account and dispute fraud?,compromised_card,compromised_card,compromised_card
+someone is using my account,compromised_card,compromised_card,compromised_card
+How do I freeze my card using the app?,compromised_card,compromised_card,compromised_card
+Can I freeze my card right now?,compromised_card,compromised_card,compromised_card
+I believe someone is using my card without my agreement!,compromised_card,compromised_card,compromised_card
+"There are a few transaction that I don't recognize, I think someone managed to get my card details and use it.",compromised_card,compromised_card,compromised_card
+I think my child used my card while I wasn't home.,compromised_card,compromised_card,compromised_card
+I think someone has access to my card numbers that shouldn't.,compromised_card,compromised_card,compromised_card
+"I see random purchases to my account, was it hacked?",compromised_card,compromised_card,compromised_card
+Someone I don't know has used my card without permission.,compromised_card,compromised_card,compromised_card
+What do I do to stop unauthorized transactions on my card? I was never in the place from which the transactions on my bill were made and I never made them. Please help!,compromised_card,compromised_card,compromised_card
+Can I use app to freeze my card and dispute fraud?,compromised_card,compromised_card,compromised_card
+What do I do if I think my card was improperly used?,compromised_card,compromised_card,compromised_card
+I think someone copied the numbers on my card and is using them.,compromised_card,compromised_card,compromised_card
+I have no idea why my card payment did not work.,declined_card_payment,declined_card_payment,declined_card_payment
+My card didn't work in one of the shops.,declined_card_payment,compromised_card,compromised_card
+Please explain why my card was declined?,declined_card_payment,declined_card_payment,declined_card_payment
+Why was my Payment declined,declined_card_payment,declined_card_payment,declined_card_payment
+My card declined,declined_card_payment,declined_card_payment,declined_card_payment
+The new card that was just sent to me was declined multiple times yesterday when I tried to use it at a restaurant to pay for my dinner.  I am really disappointed  and embarrassed that my card was denied when I tried to use it to pay for my friend's birthday dinner.,declined_card_payment,declined_card_payment,declined_card_payment
+My new card keeps getting declined. I was very excited to use it for the first time today. Why is this doing this?,declined_card_payment,declined_card_payment,declined_card_payment
+My card was declined in a shop,declined_card_payment,declined_card_payment,declined_card_payment
+They declined my card payment.,declined_card_payment,declined_card_payment,declined_card_payment
+I don't know why my payment didn't work.,declined_card_payment,declined_card_payment,declined_card_payment
+Do you know why my card payment did not work?,declined_card_payment,declined_card_payment,declined_card_payment
+Why was a transaction on my card declined?,declined_card_payment,declined_card_payment,declined_card_payment
+I'm really stuck. I don't know why but my card payment has not gone through.,declined_card_payment,declined_card_payment,declined_card_payment
+Why are you declining my payment? Everything was fine.,declined_card_payment,declined_card_payment,declined_card_payment
+Do you know why my card payment is declined?,declined_card_payment,declined_card_payment,declined_card_payment
+"I tried using my card and it kept getting declined, Why?",declined_card_payment,declined_card_payment,declined_card_payment
+I was trying to purchase something at the store today and my card has been declined.  Why has this happened?,declined_card_payment,declined_card_payment,declined_card_payment
+"I have a card payment that was declined, but why?",declined_card_payment,declined_card_payment,declined_card_payment
+"Hello, I am facing the issue with my new card as payments are declining again and again. Please help me in this issue.",declined_card_payment,declined_card_payment,declined_card_payment
+Something is wrong with my payment account since it has been declined,declined_card_payment,declined_card_payment,declined_card_payment
+How do I contact customer support about a transfer?,declined_transfer,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+Why was I unable to do a transfer?,declined_transfer,declined_transfer,declined_transfer
+I could not do a transfer because it was declined,declined_transfer,declined_transfer,declined_transfer
+Good morning. I tried to make a purchase with my credit card last night and again this morning. Both times it was declined. Can you investigate?,declined_transfer,declined_card_payment,declined_card_payment
+Why did my my transfer get declined?,declined_transfer,declined_transfer,declined_transfer
+Trouble transferring transaction contact for help,declined_transfer,lost_or_stolen_card,lost_or_stolen_card
+why was my transfer declined,declined_transfer,declined_transfer,declined_transfer
+"You keep declining my transfers? It's always been working really well so far, but when I tried to buy something just now the card got declined. I tried couple times already but same thing.",declined_transfer,declined_transfer,declined_transfer
+What is the reason my transfer was declined?,declined_transfer,declined_transfer,declined_transfer
+My transfer was declined,declined_transfer,declined_transfer,declined_transfer
+I tried to buy something online yesterday but it kept saying declined. Tried again today but same thing happened. What's broken?,declined_transfer,declined_card_payment,declined_card_payment
+Why could my transfer have been declined?,declined_transfer,declined_transfer,declined_transfer
+"If the transfer details have already but reviewed and confirmed that they are correct, what other reason would cause my transfer to be declined?",declined_transfer,declined_transfer,declined_transfer
+Why did my transfer decline,declined_transfer,declined_transfer,declined_transfer
+"When I submit a transfer, it is being declined.  The information I put in has been reviewed.",declined_transfer,declined_transfer,declined_transfer
+"I tried to make a transfer, but it was declined. Can you tell me why?",declined_transfer,declined_transfer,declined_transfer
+What would make a decline message show up during a transfer?,declined_transfer,declined_transfer,declined_transfer
+Why was the transfer declined?,declined_transfer,declined_transfer,declined_transfer
+Why did a transfer get declined?,declined_transfer,declined_transfer,declined_transfer
+"I think my transfer was declined, but why?",declined_transfer,declined_transfer,declined_transfer
+My card got lost.,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+Is a copy of the police report necessary for completing the report process?,lost_or_stolen_card,compromised_card,compromised_card
+Help!  I can't find my card.,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+Help.  I have a stolen card!,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+Oh no!  I lost my card!  Help!,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+My card is gone I think it was stolen,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+"I believe my card has been stolen, what can I do about this situation? It's urgent.",lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+How can I freeze a stolen card?,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+My card got stolen!,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+How do I deal with a stolen card?,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+I lost my wallet today with all my credit cards. Will you please block the card and send a replacement?,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+My bags were stolen. I need a new card but need to cancel the stolen one.,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+Help! Someone stole my card!,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+Some idiot stole my card.,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+"Someone stole my wallet earlier today, not sure exactly when, probably on Piccadilly circus. Can you check if there were any attempts to use the card and obviously block it?",lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+Somehow I am missing my card.  What should I do?,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+I need help with a lost card,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+I believe my credit card was stolen.,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+My card is lost! What do I do now?,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+What should I do if my card is missing?,lost_or_stolen_card,lost_or_stolen_card,lost_or_stolen_card
+top up did not complete,pending_top_up,top_up_failed,top_up_failed
+Can you please make my top up go through as soon as possible. I really need the money and it has been pending for an hour already.,pending_top_up,pending_top_up,pending_top_up
+My top up is pending.,pending_top_up,pending_top_up,pending_top_up
+The top-up is pending.,pending_top_up,pending_top_up,pending_top_up
+"I tried topping up but my funds seem to be pending. I want to buy something right now, what do I do?",pending_top_up,pending_top_up,pending_top_up
+there's a delay in my top-up,pending_top_up,pending_top_up,pending_top_up
+Can you look into my top up please.  I made it over three hours ago and yet it's still pending.,pending_top_up,pending_top_up,pending_top_up
+"I've already topped up, but I cannot see the funds being available. What happened?",pending_top_up,pending_top_up,pending_top_up
+"OMG!  I'm trying to load my card and it wont top up!  I desperately need the money either on my card or in my bank, where is it?",pending_top_up,top_up_failed,top_up_failed
+"Hi I'm a new customer and tried topping up for the first time today, seems it's not working, the thing shows up as pending since half an hour already! Please fix it!",pending_top_up,pending_top_up,pending_top_up
+Why hasn't my top-up been completed?,pending_top_up,pending_top_up,pending_top_up
+What is going on? My top-up is still pending. I use your system all the time but now it is just showing as pending.,pending_top_up,pending_top_up,pending_top_up
+What does it mean when my top up is saying  still pending?,pending_top_up,pending_top_up,pending_top_up
+Why is my top-up still pending?,pending_top_up,pending_top_up,pending_top_up
+Why is my top-up still outstanding?,pending_top_up,pending_top_up,pending_top_up
+Is there a reason my top up hasn't gone through,pending_top_up,top_up_failed,top_up_failed
+"So, I am a new customer and attempted to top up for the very first time today. It's already been pending for half an hour and doesn't seem to be working. I need to please get this fixed.",pending_top_up,pending_top_up,pending_top_up
+When will my top-up process?,pending_top_up,pending_top_up,pending_top_up
+Where is the money I topped off with?,pending_top_up,pending_top_up,pending_top_up
+My card was topped this morning but I can't see the funds. Why didn't it complete?,pending_top_up,top_up_failed,top_up_failed
+My transfer hasn't gone through yet.,pending_transfer,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+How long does a transfer take to be confirmed?,pending_transfer,pending_transfer,pending_transfer
+Transferring money in 2018 to another country shouldn't take this long. My transfer has been pending for too long. I verified my account details are correct.,pending_transfer,pending_transfer,pending_transfer
+My transfer is still coming up as pending.,pending_transfer,pending_transfer,pending_transfer
+I am waiting for a pending money transfer to process.,pending_transfer,pending_transfer,pending_transfer
+Why is a money transfer not showing?,pending_transfer,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+"Why does my transfer say ""pending""?",pending_transfer,pending_transfer,pending_transfer
+I submitted my transfer but it has been pending for quite a while and I was wondering what takes so long? why hasn't it completed,pending_transfer,pending_transfer,pending_transfer
+How long does a transfer stay pending?,pending_transfer,pending_transfer,pending_transfer
+i transfered however its still pending,pending_transfer,pending_transfer,pending_transfer
+Why hasn't my transfer gone through yet?,pending_transfer,pending_transfer,pending_transfer
+How can I speed up a transfer?  Mine is pending.,pending_transfer,pending_transfer,pending_transfer
+How long can an EU transfer take?,pending_transfer,pending_transfer,pending_transfer
+My transfer is still pending and I know the account numbers are correct.  Please help.,pending_transfer,pending_transfer,pending_transfer
+Please explain why the transfers shows up as pending?,pending_transfer,pending_transfer,pending_transfer
+Someone transferred money to me and it doesn't show,pending_transfer,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+I have a transfer that's pending and wanted to know how long it is going to take to process?,pending_transfer,pending_transfer,pending_transfer
+How long does it take for a money transfer to show?,pending_transfer,pending_transfer,pending_transfer
+"I would like to know why my payment is still pending, can you help?",pending_transfer,pending_top_up,pending_top_up
+How long can I expect a transfer to pend for?,pending_transfer,pending_transfer,pending_transfer
+My funding to my card didn't go through.,top_up_failed,top_up_failed,top_up_failed
+I topped up but the app did not accept it.,top_up_failed,top_up_failed,top_up_failed
+"Heyy I tried to top up with my card today but it failed! I just got the couple days before but it has worked last time. What's going on, can you double check please?",top_up_failed,top_up_failed,top_up_failed
+Why didn`t my topup go through?,top_up_failed,top_up_failed,top_up_failed
+My top up was denied in the app.,top_up_failed,top_up_failed,top_up_failed
+How can I check to see if my top-up worked?,top_up_failed,pending_top_up,pending_top_up
+My top-up isn't working.,top_up_failed,top_up_failed,top_up_failed
+"I really need money from my card today, but my card is getting declined. Please help!!",top_up_failed,declined_card_payment,declined_card_payment
+Why caused my top up to not work?,top_up_failed,top_up_failed,top_up_failed
+why isnt top up working,top_up_failed,top_up_failed,top_up_failed
+I think my top up did not work,top_up_failed,top_up_failed,top_up_failed
+The app won't let me top up my account,top_up_failed,pending_top_up,pending_top_up
+Can you tell me if my pop-up went through?,top_up_failed,pending_top_up,pending_top_up
+The app denied my topped up.,top_up_failed,top_up_failed,top_up_failed
+My top up failed.,top_up_failed,top_up_failed,top_up_failed
+I attempted to top up but the app denied it.,top_up_failed,top_up_failed,top_up_failed
+I'm not sure why my top up request was denied,top_up_failed,top_up_failed,top_up_failed
+What reason did my top-up fail for?,top_up_failed,top_up_failed,top_up_failed
+How did my top-up fail?,top_up_failed,top_up_failed,top_up_failed
+please tell me why my top-up failed.,top_up_failed,top_up_failed,top_up_failed
+How long will it take for my transaction to be completed?,transfer_not_received_by_recipient,pending_top_up,pending_top_up
+The receipient doesn't see my money transfer.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+I tried to send someone money but they haven't received it.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+"I've just moved address from a place in Durham to a place in Walton-On-The-Naze.  I have a new landlord at my new house and they haven't got my payment but I know I sent it on time, can you check they got it please?",transfer_not_received_by_recipient,pending_transfer,pending_transfer
+"How long does it take for transfers to finish?  I sent funds to my pal, and she says that she has not gotten anything.",transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+I completed a money transaction but the recipient hasn't received it,transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+How long does it take for a transfer to get to a recipient?,transfer_not_received_by_recipient,pending_transfer,pending_transfer
+How long until my friend receives my transaction?,transfer_not_received_by_recipient,pending_transfer,pending_transfer
+Is there a reason why my transaction is taking so long?,transfer_not_received_by_recipient,pending_top_up,pending_top_up
+My friend still hasn't gotten a transaction I made.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+"The day before yesterday, I performed a transfer which was within this country. It still hasn't gone through. Can you check on that? The account number is definitely correct, as I've checked and double checked.",transfer_not_received_by_recipient,declined_transfer,declined_transfer
+I made a money transaction but the recipient can't see it,transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+Why hasn't my recipient received their money?,transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+"Hey, I need some help figuring out way my transfer is not complete yet. My Landlord hasn't got the money yet.She should have received it by now.",transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+I sent money.  They haven't received it.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+Where is the transfer I started?,transfer_not_received_by_recipient,pending_transfer,pending_transfer
+"I just finished sending money, but it's not logging on the recipient side.",transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+I am still awaiting the completion of the transaction.,transfer_not_received_by_recipient,pending_top_up,pending_top_up
+I sent some money and the receiver can't access it.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
+How can the recipient see my money transaction?,transfer_not_received_by_recipient,transfer_not_received_by_recipient,transfer_not_received_by_recipient
