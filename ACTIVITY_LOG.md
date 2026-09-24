@@ -160,3 +160,15 @@ python src/benchmark_ollama.py qwen2.5:7b-instruct
 - Compared with qwen2.5:3b (0.975, 665.3 ms, 2,366 MB): the 7B model got 2 more messages wrong out of 200, which is within noise, but it is 2.1x slower and uses 2.2x the RAM.
 - Finding: for this task, a bigger model did not help. The 3B model is the better LLM choice on CPU.
 - Caveat: only 10 very distinct intents, and only 200 messages.
+
+## Step 17: Embedding model + simple classifier (all-MiniLM-L6-v2)
+```bash
+python src/benchmark_embeddings.py
+```
+- An embedding model turns each message into a vector of numbers that captures its meaning. Loaded with `AutoTokenizer` and `AutoModel` from `transformers`. Mean pooling averages per-word outputs into one vector per message.
+- A logistic regression (scikit-learn) is trained on those vectors, using the 1,318 training messages for the same 10 intents, and evaluated on the same 200 test messages. The classifier never sees the test messages during training.
+- The script also fixed the `NaN` in the `unparsed` column of `results/metrics.csv`.
+- Result: accuracy 0.990, macro F1 0.990, 6.1 ms per message, about 647 MB RAM.
+- Compared with qwen2.5:3b: more accurate, about 110x faster, about 1/4 of the RAM.
+- Trade-off: needs labeled training data, while the zero-shot model and the LLMs need none.
+- Caveat: only 10 very distinct intents, and the training and test data come from the same dataset.
