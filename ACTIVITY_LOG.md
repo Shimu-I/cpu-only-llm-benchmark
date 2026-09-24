@@ -136,3 +136,17 @@ cat results/metrics.csv
 - A warm-up call runs first so model loading time doesn't distort the latency.
 - Result: accuracy 0.645, macro F1 0.631, 196.5 ms per message, 597 MB RAM.
 - This is the baseline: fast and light, but about 35% of messages are misrouted.
+
+## Step 15: Benchmark an Ollama LLM (qwen2.5:3b)
+```bash
+curl -s localhost:11434
+python src/benchmark_ollama.py qwen2.5:3b
+```
+- `curl` checks that the Ollama service is running.
+- The script sends each message to the local LLM with a prompt listing the 10 categories, and asks for only the category name. `temperature=0` makes answers repeatable, and `num_predict=20` caps the answer length.
+- Answers that don't match a valid category count as wrong and are tracked in the `unparsed` column. RAM is the summed memory of the `ollama` processes (an approximation).
+- The model name is a command-line argument, so the same script works for other Ollama models.
+- Result: accuracy 0.975, macro F1 0.975, 665.3 ms per message, about 2,366 MB RAM, 0 unparsed answers.
+- Compared with the DistilBERT baseline (0.645 accuracy, 196.5 ms, 597 MB): far more accurate, about 3.4x slower and 4x more memory.
+- Caveat: the 10 intents are very distinct, so this is the easy version of the task. Consider adding confusable intents later.
+- Pasting long scripts into the terminal sometimes garbles the display, but the script still ran correctly. Check the results file instead of trusting the display.
