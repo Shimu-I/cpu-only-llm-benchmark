@@ -172,3 +172,17 @@ python src/benchmark_embeddings.py
 - Compared with qwen2.5:3b: more accurate, about 110x faster, about 1/4 of the RAM.
 - Trade-off: needs labeled training data, while the zero-shot model and the LLMs need none.
 - Caveat: only 10 very distinct intents, and the training and test data come from the same dataset.
+
+## Step 18: Failure analysis
+```bash
+python src/failure_analysis.py
+```
+- Reads every `results/preds_*.csv`, lists the most common confusions per model, prints the wrong messages for the strong models, and finds messages that 2 or more strong models got wrong. Saves all errors to `results/all_errors.csv`.
+- DistilBERT (71 errors): confusions are scattered and illogical (card_arrival -> change_pin 7x, lost_or_stolen_card -> declined_card_payment 9x).
+- Strong models: errors are understandable and mostly on ambiguous messages. Examples: "Is it lost?" in a card_arrival message; "Can you cancel my purchase?" routed to terminate_account.
+- qwen2.5:3b (5 errors): 3 were card_arrival -> lost_or_stolen_card.
+- qwen2.5:7b-instruct (7 errors): 4 were the same systematic mistake, vague "transaction" messages routed to top_up_failed instead of transfer_not_received_by_recipient. Possible fix to test: add a description of each category to the prompt.
+- all-MiniLM-L6-v2 (2 errors): "How do I locate my card?" and a police-report question.
+- 3 messages were missed by 2 strong models, which suggests part of the remaining error is ambiguous wording or labels.
+- Business note: misroutes have different costs, e.g. sending a missing-card message to the fraud team wastes an escalation.
+- Caveat: only 200 messages, so differences between the strong models are small.
