@@ -231,3 +231,15 @@ python src/benchmark_ollama.py qwen2.5:7b-instruct hard
 - Idea to test: add a one-line description of each category to the LLM prompt.
 - Caveat: only 200 messages per sample.
 - Cosmetic issue: the DistilBERT row has a blank `unparsed` value, because that column was added after its script ran. To be cleaned up in the comparison step.
+
+## Step 22: Comparison table and charts
+```bash
+python src/make_comparison.py
+xdg-open results/accuracy_easy_vs_hard.png
+xdg-open results/accuracy_vs_speed.png
+```
+- Merges `results/metrics.csv` (easy) and `results/metrics_hard.csv` (hard) into `results/comparison.csv`, with an `accuracy_drop` column. Also fills the blank `unparsed` value in the DistilBERT row with 0.
+- Chart 1, `accuracy_easy_vs_hard.png`: grouped bars showing every model drops on the hard sample, but by different amounts (MiniLM -11 points, qwen2.5-3b -33).
+- Chart 2, `accuracy_vs_speed.png`: accuracy against latency on the hard sample (log scale on the x axis), with bubble size showing RAM. MiniLM sits alone in the best corner: most accurate, fastest, smallest bubble.
+- `matplotlib.use("Agg")` lets matplotlib save charts to files without opening a window.
+- Fix: bar labels showed 0.96 and 0.97 for values that are really 0.965 and 0.975 (rounding of halves), so I changed the format from `.2f` to `.3f` to match the tables.

@@ -1,0 +1,5 @@
+type,model,accuracy_easy,macro_f1_easy,avg_latency_ms_easy,ram_mb_easy,accuracy_hard,macro_f1_hard,avg_latency_ms_hard,ram_mb_hard,accuracy_drop
+hf_embedding_classifier,all-MiniLM-L6-v2,0.99,0.99,6.1,647,0.88,0.881,8.0,638,0.11
+ollama_llm,qwen2.5-7b-instruct,0.965,0.964,1380.1,5099,0.76,0.75,1509.7,4854,0.205
+ollama_llm,qwen2.5-3b,0.975,0.975,665.3,2366,0.64,0.586,719.8,2438,0.335
+huggingface_zero_shot,distilbert-base-uncased-mnli,0.645,0.631,196.5,597,0.385,0.337,218.4,513,0.26

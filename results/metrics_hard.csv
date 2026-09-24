@@ -1,5 +1,5 @@
 model,type,accuracy,macro_f1,avg_latency_ms,ram_mb,unparsed
-all-MiniLM-L6-v2,hf_embedding_classifier,0.88,0.881,8.0,638,0.0
-distilbert-base-uncased-mnli,huggingface_zero_shot,0.385,0.337,218.4,513,
-qwen2.5-3b,ollama_llm,0.64,0.586,719.8,2438,0.0
-qwen2.5-7b-instruct,ollama_llm,0.76,0.75,1509.7,4854,0.0
+all-MiniLM-L6-v2,hf_embedding_classifier,0.88,0.881,8.0,638,0
+distilbert-base-uncased-mnli,huggingface_zero_shot,0.385,0.337,218.4,513,0
+qwen2.5-3b,ollama_llm,0.64,0.586,719.8,2438,0
+qwen2.5-7b-instruct,ollama_llm,0.76,0.75,1509.7,4854,0
