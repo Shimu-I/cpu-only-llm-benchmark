@@ -265,3 +265,12 @@ pip freeze >> requirements.txt
 - First version used Gradio's default layout, which was too wide to read on a large screen. Fixed by using `gr.Blocks` with a centered 760 px column, larger text, and a vertical layout, with the examples as clickable buttons.
 - Test: "What's the weather today?" gave only 21% confidence (best guess: card delivery estimate), so it was sent to a human. The classifier only knows 15 intents and must pick one of them, so the threshold is the safety net for messages outside its scope.
 - Re-ran `pip freeze` so `requirements.txt` includes Gradio.
+
+## Step 24b: Study and presentation documents
+```bash
+mkdir -p docs
+mv ~/Downloads/glossary.md ~/Downloads/interview_qa.md ~/Downloads/project_story.md docs/
+```
+- `docs/glossary.md`: every new term in the project, in simple English with examples.
+- `docs/interview_qa.md`: 66 interviewer-style questions with answers based on the real results.
+- `docs/project_story.md`: how to present the project (pitch, story, demo script, slides, numbers cheat sheet, CV bullets, documentation checklist).
