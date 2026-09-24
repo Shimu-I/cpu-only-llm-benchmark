@@ -243,3 +243,12 @@ xdg-open results/accuracy_vs_speed.png
 - Chart 2, `accuracy_vs_speed.png`: accuracy against latency on the hard sample (log scale on the x axis), with bubble size showing RAM. MiniLM sits alone in the best corner: most accurate, fastest, smallest bubble.
 - `matplotlib.use("Agg")` lets matplotlib save charts to files without opening a window.
 - Fix: bar labels showed 0.96 and 0.97 for values that are really 0.965 and 0.975 (rounding of halves), so I changed the format from `.2f` to `.3f` to match the tables.
+
+## Step 23: Decision memo
+```bash
+cat > reports/decision_memo.md
+```
+- One-page memo for a business reader: recommendation, question, method, results table, why MiniLM wins, what it means in practice, risks, next steps.
+- Recommendation: MiniLM embeddings + logistic regression if labeled data exists; qwen2.5:7b-instruct as a stop-gap if not; not the zero-shot DistilBERT model.
+- The "time for 100,000 messages" column is derived from measured latency (latency x 100,000): MiniLM about 13 minutes, 7B about 42 hours, 3B about 20 hours, DistilBERT about 6 hours.
+- Only measured numbers are used. Risks and limits are stated openly (small sample, one dataset, one laptop, ambiguous labels).
