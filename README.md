@@ -1,5 +1,7 @@
 # cpu-only-llm-benchmark
 
+![project-demo](project-demo.png)
+
 A benchmark of open-source language models (Hugging Face and Ollama) on a CPU-only laptop, built around one business decision.
 
 ## Problem
