@@ -150,3 +150,13 @@ python src/benchmark_ollama.py qwen2.5:3b
 - Compared with the DistilBERT baseline (0.645 accuracy, 196.5 ms, 597 MB): far more accurate, about 3.4x slower and 4x more memory.
 - Caveat: the 10 intents are very distinct, so this is the easy version of the task. Consider adding confusable intents later.
 - Pasting long scripts into the terminal sometimes garbles the display, but the script still ran correctly. Check the results file instead of trusting the display.
+
+## Step 16: Benchmark a bigger Ollama model (qwen2.5:7b-instruct)
+```bash
+python src/benchmark_ollama.py qwen2.5:7b-instruct
+```
+- Same script and same 200 messages as Step 15, so the comparison is fair. Only the model changed.
+- Result: accuracy 0.965, macro F1 0.964, 1,380.1 ms per message, about 5,099 MB RAM, 0 unparsed.
+- Compared with qwen2.5:3b (0.975, 665.3 ms, 2,366 MB): the 7B model got 2 more messages wrong out of 200, which is within noise, but it is 2.1x slower and uses 2.2x the RAM.
+- Finding: for this task, a bigger model did not help. The 3B model is the better LLM choice on CPU.
+- Caveat: only 10 very distinct intents, and only 200 messages.
