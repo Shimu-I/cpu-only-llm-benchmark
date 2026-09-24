@@ -98,3 +98,19 @@ Result:
 - Columns: `text`, `label` (number), `label_text` (readable intent name).
 - 77 unique intents (e.g. `card_arrival`).
 - Lesson: when a dataset fails to load, check whether another copy of it exists on the Hub in a script-free format.
+
+## Step 11: List all intents
+```bash
+python src/list_labels.py
+```
+- Counts the test messages per intent (about 40 each, 77 intents). Note: the label `reverted_card_payment?` really contains a question mark.
+
+## Step 12: Choose 10 intents and save a fixed test sample
+```bash
+python src/prepare_data.py
+```
+- Kept 10 clearly different intents (lost_or_stolen_card, card_arrival, declined_card_payment, exchange_rate, transfer_not_received_by_recipient, top_up_failed, request_refund, change_pin, verify_my_identity, terminate_account). Each maps to a different support team.
+- Sampled 20 test messages per intent with `random_state=42`, giving 200 messages saved to `data/processed/test_sample.csv`.
+- Why 200: enough for a fair comparison, small enough for a 7B model to finish on CPU.
+- The fixed seed makes the sample reproducible. The CSV is gitignored, and the script recreates it.
+- Why the test split: models never see it during training, so scores are fair.
