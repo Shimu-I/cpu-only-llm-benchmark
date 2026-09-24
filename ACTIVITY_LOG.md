@@ -114,3 +114,14 @@ python src/prepare_data.py
 - Why 200: enough for a fair comparison, small enough for a 7B model to finish on CPU.
 - The fixed seed makes the sample reproducible. The CSV is gitignored, and the script recreates it.
 - Why the test split: models never see it during training, so scores are fair.
+
+## Step 13: First Hugging Face model (zero-shot classification)
+```bash
+python src/first_model.py
+du -sh ~/.cache/huggingface
+```
+- A `pipeline` wraps a model, its tokenizer and the answer formatting in one call. `transformers` downloads the model once from the Hub and caches it.
+- Zero-shot classification: the model scores how well each candidate label fits a message, without being trained on those labels. Model used: `typeform/distilbert-base-uncased-mnli` (about 270 MB).
+- Tested on 4 messages first, before running on all 200.
+- Result: 2 of 4 correct. Correct predictions had low confidence (0.31, 0.16) and wrong predictions had high confidence (0.61, 0.88), so the model's confidence score is unreliable. To follow up in the failure analysis.
+- Cache size after download: 474 MB.
