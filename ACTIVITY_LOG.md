@@ -186,3 +186,12 @@ python src/failure_analysis.py
 - 3 messages were missed by 2 strong models, which suggests part of the remaining error is ambiguous wording or labels.
 - Business note: misroutes have different costs, e.g. sending a missing-card message to the fraud team wastes an escalation.
 - Caveat: only 200 messages, so differences between the strong models are small.
+
+## Step 19: Create a harder test set
+```bash
+python src/prepare_hard_data.py
+```
+- The first 10 intents were very different from each other, so it was an easy test. This set uses 5 look-alike pairs: lost_or_stolen_card vs compromised_card, declined_card_payment vs declined_transfer, transfer_not_received_by_recipient vs pending_transfer, top_up_failed vs pending_top_up, card_arrival vs card_delivery_estimate.
+- Same method as Step 12: 20 test messages per intent, `random_state=42`, 200 messages in total.
+- Saved to `data/processed/test_sample_hard.csv`, a separate file, so the original easy sample is untouched. The CSV is gitignored, and the script recreates it.
+- Some labels are genuinely ambiguous, e.g. "How long does it take for transfers to finish?" is labeled transfer_not_received_by_recipient but could also be pending_transfer.
