@@ -252,3 +252,16 @@ cat > reports/decision_memo.md
 - Recommendation: MiniLM embeddings + logistic regression if labeled data exists; qwen2.5:7b-instruct as a stop-gap if not; not the zero-shot DistilBERT model.
 - The "time for 100,000 messages" column is derived from measured latency (latency x 100,000): MiniLM about 13 minutes, 7B about 42 hours, 3B about 20 hours, DistilBERT about 6 hours.
 - Only measured numbers are used. Risks and limits are stated openly (small sample, one dataset, one laptop, ambiguous labels).
+
+## Step 24: Demo app (Gradio)
+```bash
+pip install --no-cache-dir gradio
+python app/app.py
+echo "--extra-index-url https://download.pytorch.org/whl/cpu" > requirements.txt
+pip freeze >> requirements.txt
+```
+- `app/app.py` is a small web page that runs on the laptop. It uses the winning model (all-MiniLM-L6-v2 + logistic regression), trained at startup (about 20 seconds) on 15 intents from the easy and hard samples combined.
+- The user types a customer message and sees the routing decision, the top 3 categories with confidence, and a slider for the confidence threshold. Below the threshold, the app says "send to a human agent". This implements the confidence-threshold idea from the decision memo.
+- First version used Gradio's default layout, which was too wide to read on a large screen. Fixed by using `gr.Blocks` with a centered 760 px column, larger text, and a vertical layout, with the examples as clickable buttons.
+- Test: "What's the weather today?" gave only 21% confidence (best guess: card delivery estimate), so it was sent to a human. The classifier only knows 15 intents and must pick one of them, so the threshold is the safety net for messages outside its scope.
+- Re-ran `pip freeze` so `requirements.txt` includes Gradio.
