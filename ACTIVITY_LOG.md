@@ -70,3 +70,14 @@ python -c "import transformers, datasets; print('transformers', transformers.__v
 
 ## Step 8: Write README and activity log
 - Rewrote `README.md` (problem, aim, approach, gain) and created this file.
+
+## Step 9: Install analysis tools and save requirements
+```bash
+pip install --no-cache-dir pandas scikit-learn matplotlib psutil ollama
+python -c "import pandas, sklearn, matplotlib, psutil, ollama; print('all imports OK')"
+echo "--extra-index-url https://download.pytorch.org/whl/cpu" > requirements.txt
+pip freeze >> requirements.txt
+```
+- `pandas`: tables. `scikit-learn`: metrics like F1. `matplotlib`: charts. `psutil`: RAM measurement. `ollama`: Python client for local Ollama models.
+- The import check confirms everything installed correctly.
+- `pip freeze` writes every installed package and its exact version to `requirements.txt`, so the environment can be recreated. The first line points pip at the CPU-only PyTorch build.
