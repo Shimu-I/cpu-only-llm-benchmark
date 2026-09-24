@@ -81,3 +81,20 @@ pip freeze >> requirements.txt
 - `pandas`: tables. `scikit-learn`: metrics like F1. `matplotlib`: charts. `psutil`: RAM measurement. `ollama`: Python client for local Ollama models.
 - The import check confirms everything installed correctly.
 - `pip freeze` writes every installed package and its exact version to `requirements.txt`, so the environment can be recreated. The first line points pip at the CPU-only PyTorch build.
+
+## Step 10: Download and explore the dataset
+```bash
+python src/explore_data.py
+```
+- The script loads a dataset from the Hugging Face Hub with `load_dataset` and prints its splits, columns and sample rows. The data is cached in `~/.cache/huggingface` (outside the repo).
+
+Problems and fixes:
+1. `load_dataset("PolyAI/banking77")` failed with `Dataset scripts are no longer supported`. The `datasets` 5.x library no longer runs datasets that ship with a Python loading script.
+2. Tried `revision="refs/convert/parquet"` to get an auto-converted copy. Failed with `404 Revision Not Found`, because that branch doesn't exist for this dataset.
+3. Fix: switched to `mteb/banking77`, the same data stored as plain parquet files with no script.
+
+Result:
+- 9,993 train rows and 3,076 test rows.
+- Columns: `text`, `label` (number), `label_text` (readable intent name).
+- 77 unique intents (e.g. `card_arrival`).
+- Lesson: when a dataset fails to load, check whether another copy of it exists on the Hub in a script-free format.
