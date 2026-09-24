@@ -1,3 +1,4 @@
+import config
 import os
 import time
 
@@ -13,7 +14,7 @@ from transformers import AutoModel, AutoTokenizer
 MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 name = MODEL.split("/")[-1]
 
-test_df = pd.read_csv("data/processed/test_sample.csv")
+test_df = pd.read_csv(config.SAMPLE_PATH)
 labels = sorted(test_df["label_text"].unique())
 
 train_df = load_dataset("mteb/banking77")["train"].to_pandas()
@@ -62,7 +63,7 @@ for text in test_df["text"]:
     preds.append(pred)
 
 test_df["predicted"] = preds
-test_df.to_csv(f"results/preds_{name}.csv", index=False)
+test_df.to_csv(f"results/preds_{name}{config.SUFFIX}.csv", index=False)
 
 new_row = pd.DataFrame([{
     "model": name,
@@ -74,8 +75,8 @@ new_row = pd.DataFrame([{
     "unparsed": 0,
 }])
 
-path = "results/metrics.csv"
-metrics = pd.concat([pd.read_csv(path), new_row], ignore_index=True)
+path = config.METRICS_PATH
+metrics = pd.concat([pd.read_csv(path), new_row], ignore_index=True) if os.path.exists(path) else new_row
 metrics["unparsed"] = metrics["unparsed"].fillna(0).astype(int)
 metrics.to_csv(path, index=False)
 

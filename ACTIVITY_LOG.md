@@ -195,3 +195,17 @@ python src/prepare_hard_data.py
 - Same method as Step 12: 20 test messages per intent, `random_state=42`, 200 messages in total.
 - Saved to `data/processed/test_sample_hard.csv`, a separate file, so the original easy sample is untouched. The CSV is gitignored, and the script recreates it.
 - Some labels are genuinely ambiguous, e.g. "How long does it take for transfers to finish?" is labeled transfer_not_received_by_recipient but could also be pending_transfer.
+
+## Step 20: Make the benchmark scripts work on either sample
+```bash
+cat > src/config.py   # shared settings
+sed -i ...            # small edits to the three benchmark scripts
+grep -n "config" src/benchmark_*.py
+python -m py_compile src/benchmark_*.py
+```
+- `src/config.py` reads the command line: if the word `hard` is present, the scripts use `test_sample_hard.csv` and write to `metrics_hard.csv` and `preds_*_hard.csv`. Without it, behavior is unchanged.
+- Example: `python src/benchmark_ollama.py qwen2.5:3b hard`.
+- `sed -i 's|old|new|' file` edits a file in place. `sed -i '1i text' file` inserts a line at the top.
+- Hard results go to separate files, so the easy results are never overwritten.
+- Also fixed the embedding script so it works even if the metrics file doesn't exist yet.
+- `python -m py_compile` checks that a script is valid Python without running it.

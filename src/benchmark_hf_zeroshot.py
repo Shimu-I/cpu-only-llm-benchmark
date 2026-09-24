@@ -1,3 +1,4 @@
+import config
 import os
 import time
 
@@ -9,7 +10,7 @@ from transformers import pipeline
 MODEL = "typeform/distilbert-base-uncased-mnli"
 model_name = MODEL.split("/")[-1]
 
-df = pd.read_csv("data/processed/test_sample.csv")
+df = pd.read_csv(config.SAMPLE_PATH)
 labels = sorted(df["label_text"].unique())
 readable = [label.replace("_", " ") for label in labels]
 to_label = dict(zip(readable, labels))
@@ -30,7 +31,7 @@ for i, text in enumerate(df["text"]):
         print(f"  done {i + 1}/{len(df)}")
 
 df["predicted"] = preds
-df.to_csv(f"results/preds_{model_name}.csv", index=False)
+df.to_csv(f"results/preds_{model_name}{config.SUFFIX}.csv", index=False)
 
 metrics = pd.DataFrame([{
     "model": model_name,
@@ -41,7 +42,7 @@ metrics = pd.DataFrame([{
     "ram_mb": round(ram_mb),
 }])
 
-path = "results/metrics.csv"
+path = config.METRICS_PATH
 metrics.to_csv(path, mode="a", header=not os.path.exists(path), index=False)
 print()
 print(metrics.to_string(index=False))

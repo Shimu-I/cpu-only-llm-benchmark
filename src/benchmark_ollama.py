@@ -1,3 +1,4 @@
+import config
 import os
 import sys
 import time
@@ -10,7 +11,7 @@ from sklearn.metrics import accuracy_score, f1_score
 MODEL = sys.argv[1] if len(sys.argv) > 1 else "qwen2.5:3b"
 tag = MODEL.replace(":", "-")
 
-df = pd.read_csv("data/processed/test_sample.csv")
+df = pd.read_csv(config.SAMPLE_PATH)
 labels = sorted(df["label_text"].unique())
 
 PROMPT = """You are a bank customer-support routing assistant.
@@ -70,7 +71,7 @@ for i, text in enumerate(df["text"]):
 
 df["raw_answer"] = raw
 df["predicted"] = preds
-df.to_csv(f"results/preds_{tag}.csv", index=False)
+df.to_csv(f"results/preds_{tag}{config.SUFFIX}.csv", index=False)
 
 new_row = pd.DataFrame([{
     "model": tag,
@@ -82,7 +83,7 @@ new_row = pd.DataFrame([{
     "unparsed": preds.count("unparsed"),
 }])
 
-path = "results/metrics.csv"
+path = config.METRICS_PATH
 if os.path.exists(path):
     new_row = pd.concat([pd.read_csv(path), new_row], ignore_index=True)
 new_row.to_csv(path, index=False)
