@@ -274,3 +274,7 @@ mv ~/Downloads/glossary.md ~/Downloads/interview_qa.md ~/Downloads/project_story
 - `docs/glossary.md`: every new term in the project, in simple English with examples.
 - `docs/interview_qa.md`: 66 interviewer-style questions with answers based on the real results.
 - `docs/project_story.md`: how to present the project (pitch, story, demo script, slides, numbers cheat sheet, CV bullets, documentation checklist).
+
+## Step 25: Final README
+Replaced README.md with the full version: problem, aim, results table, both charts, recommendation, demo screenshot, project structure, reproduce-from-scratch instructions, what I learned, limitations, and links to docs/.
+- Note: a long pasted `cat > file << 'EOF'` command got stuck mid-paste and left two orphaned processes writing nothing. Diagnosed with `ps aux | grep cat` in a second terminal, killed with `kill -9 <pid>`. Fix going forward: for very long file writes, prefer downloading the file instead of pasting a huge heredoc.
